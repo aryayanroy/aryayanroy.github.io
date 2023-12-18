@@ -10,7 +10,7 @@
     </style>
 </head>
 <body style="margin: 0; background: url(background.jpg) center/cover no-repeat fixed">
-    <header style="display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; padding: 20px; width: 100%">
+    <header style="display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; padding: 20px; width: 100%; transition: top 0.3s;">
         <h3 class="handwritten" style="font-weight: normal; margin-bottom: 0">Aryayan</h3>
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon"></label>
@@ -135,6 +135,16 @@
             var target = event.target.value;
             section_target(target);
         });
+    }
+
+    let header = document.getElementsByTagName("header")[0]
+    window.onscroll = function(e) {
+        if(this.oldScroll > this.scrollY){
+            header.style.top = "0";
+        }else{
+            header.style.top = "-86px";
+        };
+        this.oldScroll = this.scrollY;
     }
 </script>
 </html>
