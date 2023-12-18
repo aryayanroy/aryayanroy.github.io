@@ -11,6 +11,16 @@
     font-family: Handwriting;
     src: url(Satisfy-Regular.ttf);
 }
+::-webkit-scrollbar{
+    width: 0.5vw;
+}
+::-webkit-scrollbar-track {
+    background: linear-gradient(#311B92, #1A237E);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#6200EA, #304FFE);
+    border-radius: 0.1vw;
+}
 :root{
     color:white;
     font-family: sans-serif;
