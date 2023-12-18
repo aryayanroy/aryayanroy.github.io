@@ -31,7 +31,10 @@ ul{
 }
 main{
     margin-top: 85px;
-    padding: 25px;
+    padding: 20px;
+}
+article{
+    margin-top: 50px;
 }
 h1, h2, h3, h4{
     margin: 0 0 0.5em 0;
@@ -49,8 +52,11 @@ h4{
     font-size: 24px;
 }
 p{
-    margin: 0 0 1em 0;
+    margin: 0;
     line-height: 2;
+}
+p:not(:first-of-type){
+    margin-top: 1em;
 }
 svg{
     fill: white
@@ -104,7 +110,7 @@ svg{
     display: flex;
     align-items: center;
 }
-.overview>section{
+.overview>div{
     flex: 1;
 }
 .social-ul{
@@ -130,6 +136,7 @@ svg{
     z-index: -2;
     animation: glow 2s alternate infinite;
 }
+
 @keyframes glow{
     0%{
         filter: drop-shadow(0px 25px 50px #6200EA);
@@ -139,8 +146,22 @@ svg{
         filter: drop-shadow(0px 15px 30px #304FFE);
     }
 }
+.legacy{
+    display: grid;
+    column-gap: 25px;
+    row-gap: 50px;
+    align-items: baseline;
+}
+
+
+.projects-ul>li:not(:first-child){
+    margin-top: 50px;
+}
 
 @media only screen and (min-width: 1025px) {
+    article{
+        padding: 20px;
+    }
     .text-hover::after{
         content: "";
         display: block;
@@ -200,19 +221,31 @@ svg{
 }
 
 @media only screen and (min-width: 769px) {
+    article{
+        padding: 10px;
+    }
     .social-ul svg:hover{
         transform: translateY(-8px);
     }
-    .overview{
-        margin-top: 50px;
-    }
     .overview-text{
         margin-right: 25px;
+    }
+    .academics{
+        grid-template-columns: auto auto auto;
+    }
+    .academics h3, .academics>h4{
+        margin-bottom: 0;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .overview{
         flex-direction: column-reverse;
+    }
+    .legacy{
+        row-gap: 5px;
+    }
+    .academics>h4:nth-of-type(2n+3){
+        margin-top: 100px;
     }
 }
