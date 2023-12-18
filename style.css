@@ -105,6 +105,30 @@ svg{
 #menu-toggle:checked+.menu-icon::after{
     transform: translateY(-8px) rotate(45deg);
 }
+.inactive{
+    display: none !important;
+}
+.fadeout{
+    animation: fadeout 1s;
+}
+@keyframes fadeout{
+    100%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+.active{
+    animation: fadein 1s;
+}
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 .overview{
     display: flex;
