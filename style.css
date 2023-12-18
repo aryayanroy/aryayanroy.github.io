@@ -192,6 +192,18 @@ svg{
     margin-top: 50px;
 }
 
+.project-nav{
+    border-bottom: 2px dotted white;
+}
+.skills-ul{
+    margin-bottom: 50px;
+    padding-left: 20px;
+    list-style: disc;
+}
+.skills-ul>li:not(:first-child){
+    margin-top: 10px;
+}
+
 @media only screen and (min-width: 1025px) {
     article{
         padding: 20px;
