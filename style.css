@@ -39,6 +39,30 @@ ul{
     margin: 0;
     padding-left: 0;
 }
+section>ul{
+    padding-left: 20px;
+}
+section>ul>li{
+    position: relative;
+    z-index: -1;
+}
+section>ul>li::before{
+    content: "♦";
+    position: absolute;
+    font-size: 2em;
+    left: -25px;
+    top: 1px;
+}
+section>ul>li:not(:first-child){
+    margin-top: 50px;
+}
+li ul{
+    padding-left: 20px;
+    list-style: disc;
+}
+li ul>li:not(:first-child){
+    margin-top: 10px;
+}
 main{
     margin-top: 85px;
     padding: 20px;
@@ -139,18 +163,10 @@ svg{
         opacity: 1;
     }
 }
-.main-ul{
-    margin-left: 20px;
-}
-.main-ul>li:not(:first-child){
-    margin-top: 50px;
-}
-.main-ul>li::before{
-    content: "";
-    position: absolute;
-    padding: 0.3em;
-    background: white;
-    transform: translate(-30px, 20px) rotate(45deg);
+
+.legacy-ul>li{
+    display: flex;
+    align-items: baseline;
 }
 
 .overview{
@@ -196,14 +212,6 @@ svg{
 
 .project-nav{
     border-bottom: 2px dotted white;
-}
-.skills-ul{
-    margin-bottom: 50px;
-    padding-left: 20px;
-    list-style: disc;
-}
-.skills-ul>li:not(:first-child){
-    margin-top: 10px;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -272,6 +280,9 @@ svg{
     article{
         padding: 10px;
     }
+    .legacy-ul>li>div{
+        flex-grow: 1;
+    }
 
     .overview-text{
         margin-right: 25px;
@@ -279,20 +290,18 @@ svg{
     .social-ul svg:hover{
         transform: translateY(-8px);
     }
-    .legacy-ul>li{
-        display: flex;
-        align-items: baseline;
-    }
     .academics-ul>li>h4:nth-of-type(2n-1){
         width: 20%;
         flex-shrink: 0;
     }
     .academics-ul>li>div{
-        flex-grow: 1;
         margin: 0 50px;
     }
     .legacy-ul>li>h4{
         margin-bottom: 0;
+    }
+    .experiences-ul>li>h4{
+        margin-left: 25px;
     }
 }
 
@@ -300,8 +309,14 @@ svg{
     .overview{
         flex-direction: column-reverse;
     }
+    .legacy-ul>li{
+        flex-direction: column;
+    }
     .legacy-ul>li>h4:last-of-type{
         margin-top: 10px;
         margin-bottom: 0;
+    }
+    .experiences-ul>li{
+        flex-direction: column-reverse !important;
     }
 }

@@ -6,7 +6,12 @@
     <title>Aryayan Roy [Portfolio]</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
+        .experiences-ul>li>div{
+
+        }
+        .experiences-ul>li>h4{
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body style="margin: 0; background: url(background.jpg) center/cover no-repeat fixed">
@@ -25,7 +30,7 @@
     </header>
     <main>
         <article>
-            <section class="overview active" data-target="0">
+            <section class="overview inactive" data-target="0">
                 <div class="overview-text">
                     <h1 class="heading">Hi,<br>I'm Aryayan Roy</h1>
                     <p style="margin-bottom: 30px;">I am passionate about staying up-to-date with the latest industry trends and technologies, and I am always looking for new and exciting ways to improve my skills and expand my knowledge.</p>
@@ -43,7 +48,7 @@
             </section>
             <section class="inactive" data-target="1">
                 <h1 class="heading">Academics</h1>
-                <ul class="legacy-ul academics-ul main-ul">
+                <ul class="legacy-ul academics-ul">
                     <li>
                         <h4>2022 - Present</h4>
                         <div>
@@ -90,7 +95,7 @@
             </section>
             <section class="inactive" data-target="2">
                 <h1 class="heading">Projects</h1>
-                <ul class="projects-ul main-ul">
+                <ul class="projects-ul">
                     <li>
                         <h3>Library Management System</h3>
                         <p>The Library Management System is a comprehensive software solution designed to streamline and automate various library operations. It provides an efficient platform for managing books, members, borrowings, and returns in a library setting. With this system, librarians can easily track and organize books, handle member registrations, facilitate book borrowing and returning processes, and generate reports.</p>
@@ -119,23 +124,53 @@
             </section>
             <section class="inactive" data-target="3">
                 <h1 class="heading">Skills</h1>
-                <h3>Technical Skills</h3>
-                <ul class="skills-ul">
-                    <li><b>Programming:</b> PHP, Python, C</li>
-                    <li><b>Front-End:</b> HTML5, CSS3 (Responsive), Bootstrap, Tailwind CSS, SASS, JavaScript, jQuery, AJAX</li>
-                    <li><b>Database:</b> MySQL</li>
-                    <li><b>Version Control:</b> Git/GitHub</li>
-                    <li><b>Design Tool:</b> Adobe Photoshop, Illustrator, Figma</li>
-                    <li><b>3D/CAD:</b> SolidWorks, Ansys, Blender, Unity, NI Multisim</li>
-                    <li><b>Could & Analytics:</b>  Google Analytics, Google Cloud Platform (GCP), AutoML, Dataflow, cPanel</li>
-                    <li><b>Productivity:</b> Microsoft Office, Google Workspace</li>
+                <ul>
+                    <li>
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li><b>Programming:</b> PHP, Python, C</li>
+                            <li><b>Front-End:</b> HTML5, CSS3 (Responsive), Bootstrap, Tailwind CSS, SASS, JavaScript, jQuery, AJAX</li>
+                            <li><b>Database:</b> MySQL</li>
+                            <li><b>Version Control:</b> Git/GitHub</li>
+                            <li><b>Design Tool:</b> Adobe Photoshop, Illustrator, Figma</li>
+                            <li><b>3D/CAD:</b> SolidWorks, Ansys, Blender, Unity, NI Multisim</li>
+                            <li><b>Could & Analytics:</b>  Google Analytics, Google Cloud Platform (GCP), AutoML, Dataflow, cPanel</li>
+                            <li><b>Productivity:</b> Microsoft Office, Google Workspace</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Soft Skills</h3>
+                        <p>Team Player, Communication, Time Management, Critical Thinking, Adaptability, Work Ethics</p>
+                    </li>
                 </ul>
-                <h3>Soft Skills</h3>
-                <p>Team Player, Communication, Time Management, Critical Thinking, Adaptability, Work Ethics</p>
             </section>
-            <section class="inactive" data-target="4">
+            <section class="active" data-target="4">
                 <h1 class="heading">Experiences</h1>
-                
+                <ul class="legacy-ul experiences-ul">
+                    <li>
+                        <div>
+                            <h3>Team Srijan Club - BIT Mesra, Ranchi</h3>
+                            <h4>Technical Team Member - Drive/Power Train Engineer</h4>
+                            <ul>
+                                <li>Involved in designing and manufacturing the powertrain of an EV Formula Student Car.</li>
+                                <li>Studying various technical components of a Formula Car, including Aerodynamics, Chassis, Vehicle Dynamics, Cooling, Power Train and Suspensions.</li>
+                                <li>Examining the rulebook of Formula Bharat and generating comprehensive reports.</li>
+                                <li>Secured BMS Sponsorship from Tesla and Texas Instruments.</li>
+                            </ul>
+                        </div>
+                        <h4>Feb 23 - Present</h4>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Mood Indigo - IIT Bombay</h3>
+                            <h4>Indigo Squad Member (Intern)</h4>
+                            <ul>
+                                <li>Digital Marketing for College Connect Program.</li>
+                            </ul>
+                        </div>
+                        <h4>Jul - Dec 22</h4>
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
