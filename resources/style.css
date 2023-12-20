@@ -213,6 +213,9 @@ svg{
 .project-nav{
     border-bottom: 2px dotted white;
 }
+.experiences-ul>li>h4{
+    flex-shrink: 0;
+}
 
 @media only screen and (min-width: 1025px) {
     article{

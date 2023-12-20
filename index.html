@@ -4,17 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aryayan Roy [Portfolio]</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-        .experiences-ul>li>div{
-
-        }
-        .experiences-ul>li>h4{
-            flex-shrink: 0;
-        }
+        :root,a{color:#fff}li ul,section>ul{padding-left:20px}.menu-icon,.profile-image,.text-hover,section>ul>li{position:relative}@font-face{font-family:Satisfy;src:url(Poppins-Medium.ttf)}@font-face{font-family:Satisfy;font-weight:700;src:url(Poppins-SemiBold.ttf)}@font-face{font-family:Handwriting;src:url(Satisfy-Regular.ttf)}::-webkit-scrollbar{width:.5vw}::-webkit-scrollbar-track{background:linear-gradient(#311b92,#1a237e)}::-webkit-scrollbar-thumb{background:linear-gradient(#6200ea,#304ffe);border-radius:.1vw}:root{font-size:16px;font-family:Satisfy,sans-serif}*{box-sizing:border-box}a{text-decoration:none}ul{list-style:none;margin:0;padding-left:0}section>ul>li{z-index:-1}section>ul>li::before{content:"♦";position:absolute;font-size:2em;left:-25px;top:1px}article,section>ul>li:not(:first-child){margin-top:50px}li ul{list-style:disc}li ul>li:not(:first-child){margin-top:10px}main{margin-top:85px;padding:20px}h1,h2,h3,h4{margin:0 0 .5em}h1{font-size:48px}h2{font-size:40px}h3{font-size:32px}h4{font-size:24px}p{margin:0;line-height:2}p:not(:first-of-type){margin-top:1em}svg{fill:white}.text-hover{display:inline-block}.handwritten{font-family:Handwriting,sans-serif}#menu-toggle,.header-nav{display:none}.header-nav+label{padding:5px 0;cursor:pointer}.header-nav:checked+label::after{width:75%}.menu-icon{width:18px;height:18px;cursor:pointer}.menu-icon::after,.menu-icon::before{content:"";position:absolute;padding:1px 0;width:100%;border-radius:2px;background-color:#fff;transition:transform .3s}.menu-icon::after{bottom:0}#menu-toggle:checked+.menu-icon::before{transform:translateY(8px) rotate(135deg)}#menu-toggle:checked+.menu-icon::after{transform:translateY(-8px) rotate(45deg)}.inactive{display:none!important}.fadeout{animation:1s fadeout}@keyframes fadeout{100%{opacity:0;transform:translateY(-50px)}}.active{animation:1s fadein}@keyframes fadein{0%{opacity:0;transform:translateY(-50px)}100%{opacity:1}}.legacy-ul>li{display:flex;align-items:baseline}.overview{display:flex;align-items:center}.overview>div{flex:1}.social-ul{display:flex;flex-wrap:wrap}.social-ul>li{margin:10px 20px}.social-ul a{display:block;padding:5px}.social-ul svg{height:32px;transition:.2s}.profile-image{display:block;margin:auto;width:100%;z-index:-2;animation:2s infinite alternate glow}@keyframes glow{0%{filter:drop-shadow(0px 25px 50px #6200EA)}100%{transform:translateY(20px);filter:drop-shadow(0px 15px 30px #304FFE)}}.project-nav{border-bottom:2px dotted #fff}.experiences-ul>li>h4{flex-shrink:0}@media only screen and (min-width:1025px){article{padding:20px}.text-hover::after{content:"";display:block;position:absolute;left:50%;transform:translateX(-50%);padding:.6px 0;width:0;background-color:#fff;transition:.2s ease-out}.text-hover:hover::after{width:50%}.header-ul{display:flex}.header-ul>li:not(:last-child){margin-right:20px}.menu-icon{display:none}.profile-image{max-width:400px}}@media only screen and (max-width:1024px){.header-ul{position:absolute;left:0;top:0;z-index:-1;width:100vw;height:0;overflow-y:hidden;backdrop-filter:blur(20px);transition:height .6s ease-out}.header-ul>li:first-child{margin-top:87px}.header-nav+label{display:block;padding:10px 20px}#menu-toggle:checked~.header-ul{height:100vh}.profile-image{max-width:300px}}@media only screen and (min-width:769px){article{padding:10px}.legacy-ul>li>div{flex-grow:1}.overview-text{margin-right:25px}.social-ul svg:hover{transform:translateY(-8px)}.academics-ul>li>h4:nth-of-type(2n-1){width:20%;flex-shrink:0}.academics-ul>li>div{margin:0 50px}.legacy-ul>li>h4{margin-bottom:0}.experiences-ul>li>h4{margin-left:25px}}@media only screen and (max-width:768px){.overview{flex-direction:column-reverse}.legacy-ul>li{flex-direction:column}.legacy-ul>li>h4:last-of-type{margin-top:10px;margin-bottom:0}.experiences-ul>li{flex-direction:column-reverse!important}}
     </style>
 </head>
-<body style="margin: 0; background: url(background.jpg) center/cover no-repeat fixed">
+<body style="margin: 0; background: url(background.webp) center/cover no-repeat fixed">
     <header style="display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; padding: 20px; width: 100%; transition: top 0.5s;">
         <h3 class="handwritten" style="font-weight: normal; margin-bottom: 0">Aryayan</h3>
         <input type="checkbox" id="menu-toggle">
@@ -25,12 +19,11 @@
             <li><input type="radio" id="projects" name="section" class="header-nav" value="2"><label for="projects" class="text-hover">Projects</label></li>
             <li><input type="radio" id="skills" name="section" class="header-nav" value="3"><label for="skills" class="text-hover">Skills</label></li>
             <li><input type="radio" id="experiences" name="section" class="header-nav" value="4"><label for="experiences" class="text-hover">Experiences</label></li>
-            <li><input type="radio" id="achievements" name="section" class="header-nav" value="5"><label for="achievements" class="text-hover">Achievements</label></li>
         </ul>
     </header>
     <main>
         <article>
-            <section class="overview inactive" data-target="0">
+            <section class="overview active" data-target="0">
                 <div class="overview-text">
                     <h1 class="heading">Hi,<br>I'm Aryayan Roy</h1>
                     <p style="margin-bottom: 30px;">I am passionate about staying up-to-date with the latest industry trends and technologies, and I am always looking for new and exciting ways to improve my skills and expand my knowledge.</p>
@@ -43,7 +36,7 @@
                     </ul>
                 </div>
                 <div>
-                    <img src="profile_image.png" alt="Profile Image" class="profile-image">
+                    <img src="profile_image.webp" alt="Profile Image" class="profile-image">
                 </div>
             </section>
             <section class="inactive" data-target="1">
@@ -144,7 +137,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="active" data-target="4">
+            <section class="inactive" data-target="4">
                 <h1 class="heading">Experiences</h1>
                 <ul class="legacy-ul experiences-ul">
                     <li>
@@ -176,53 +169,6 @@
     </main>
 </body>
 <script>
-
-    function section_active(target){
-        var new_active = document.querySelector("section[data-target='"+target+"']");
-        if(new_active){
-            new_active.classList.add("active");
-            new_active.classList.remove("inactive");
-        }
-    }
-
-    function section_target(target){
-        var active = document.querySelectorAll(".active");
-        var checkbox = document.getElementById("menu-toggle");
-        checkbox.checked = false;
-
-        if(active.length == 0){
-            section_active(target);
-        }else{
-            active.forEach(inactive => {
-                inactive.classList.remove("active");
-                inactive.classList.add("fadeout");
-                inactive.addEventListener("animationend", function() {
-                    inactive.removeEventListener("animationend", arguments.callee);
-                    inactive.classList.remove("fadeout");
-                    inactive.classList.add("inactive");
-                    section_active(target)
-                });
-            })   
-        }
-    }
-    
-    const sections = document.getElementsByName("section");
-
-    for (var i = 0; i < sections.length; i++) {
-        sections[i].addEventListener("change", function(event) {
-            var target = event.target.value;
-            section_target(target);
-        });
-    }
-
-    let header = document.getElementsByTagName("header")[0]
-    window.onscroll = function(e) {
-        if(this.oldScroll > this.scrollY){
-            header.style.top = "0";
-        }else{
-            header.style.top = "-86px";
-        };
-        this.oldScroll = this.scrollY;
-    }
+function section_active(e){var t=document.querySelector("section[data-target='"+e+"']");t&&(t.classList.add("active"),t.classList.remove("inactive"))}function section_target(e){var t=document.querySelectorAll(".active");document.getElementById("menu-toggle").checked=!1,0==t.length?section_active(e):t.forEach(t=>{t.classList.remove("active"),t.classList.add("fadeout"),t.addEventListener("animationend",function(){t.removeEventListener("animationend",arguments.callee),t.classList.remove("fadeout"),t.classList.add("inactive"),section_active(e)})})}const sections=document.getElementsByName("section");for(var i=0;i<sections.length;i++)sections[i].addEventListener("change",function(e){section_target(e.target.value)});let header=document.getElementsByTagName("header")[0];window.onscroll=function(e){this.oldScroll>this.scrollY?header.style.top="0":header.style.top="-86px",this.oldScroll=this.scrollY};
 </script>
 </html>
