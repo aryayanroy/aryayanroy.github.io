@@ -1,0 +1,143 @@
+:root{
+    font-size: 16px;
+    line-height: 1.4;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Roboto Mono;
+}
+h1, h2, h3, h4, h5, h6, p, ul{
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: Libre Baskerville;
+}
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.8em;
+}
+h4{
+    font-size: 1.6em;
+}
+h5{
+    font-size: 1.4em;
+}
+h6{
+    font-size: 1.2em;
+}
+a{
+    color: #311B92;
+    text-decoration: none;
+}
+p{
+    text-align: justify;
+    line-height: 1.6;
+}
+aside{
+    height: 100vh;
+}
+header{
+    padding: 18px 6px 0 16px;
+    border-bottom: 1px solid black;
+}
+section:not(:first-of-type){
+    margin-top: 24px;
+}
+
+#aside-toggle{
+    display: none;
+}
+.profile-image{
+    display: block;
+    margin: 12px auto;
+    width: 180px;
+}
+.profile-title{
+    text-align: center;
+    margin-bottom: 18px;
+}
+.aside-ul{
+    list-style: none;
+    margin: 0 auto;
+    padding-left: 0;
+}
+.aside-ul>li:not(:first-child){
+    margin-top: 16px;
+}
+.aside-ul a.active{
+    text-decoration: line-through;
+}
+
+@media only screen and (min-width: 768px){
+    body{
+        display: flex;
+        align-items: flex-start;
+    }
+    aside{
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: 300px;
+        padding: 12px;
+        border-right: 1px solid black;
+    }
+    main{
+        flex-grow: 1;
+    }
+    article{
+        padding: 12px;
+    }
+    a:hover{
+        border-bottom: 2px dotted #311B92;
+    }
+
+    .aside-toggle{
+        display: none;
+    }
+    .aside-ul>li{
+        text-align: right;
+    }
+}
+@media only screen and (max-width: 767.98px){ 
+    aside{
+        position: fixed;
+        right: 100vw;
+        width: 100vw;
+        background-color: white;
+    } 
+    header{
+        display: flex;
+        align-items: center;
+        padding: 18px 0;
+    }
+    header>h1{
+        margin-bottom: 0;
+    }
+    article{
+        padding: 6px;
+    }
+
+
+    #aside-toggle:checked+aside{
+        right: 0;
+    }
+    .aside-toggle{
+        padding: 8px;
+    }
+    aside>.aside-toggle{
+        position: absolute;
+        right: 6px;
+        top: 6px;
+    }
+    .aside-ul>li{
+        text-align: center;
+    }
+}

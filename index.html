@@ -2,177 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Aryayan Roy">
-    <meta name="description" content="Portfolio of Aryayan Roy">
-    <meta name="keywords" content="Aryayan Roy, Full Stack Web Developer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aryayan Roy [Portfolio]</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root,a{color:#fff}li ul,section>ul{padding-left:20px}.menu-icon,.profile-image,.text-hover,section>ul>li{position:relative}@font-face{font-family:Satisfy;src:url(Poppins-Medium.ttf)}@font-face{font-family:Satisfy;font-weight:700;src:url(Poppins-SemiBold.ttf)}@font-face{font-family:Handwriting;src:url(Satisfy-Regular.ttf)}::-webkit-scrollbar{width:.5vw}::-webkit-scrollbar-track{background:linear-gradient(#311b92,#1a237e)}::-webkit-scrollbar-thumb{background:linear-gradient(#6200ea,#304ffe);border-radius:.1vw}:root{font-size:16px;font-family:Satisfy,sans-serif}*{box-sizing:border-box}a{text-decoration:none}ul{list-style:none;margin:0;padding-left:0}section>ul>li{z-index:-1}section>ul>li::before{content:"♦";position:absolute;font-size:2em;left:-25px;top:1px}article,section>ul>li:not(:first-child){margin-top:50px}li ul{list-style:disc}li ul>li:not(:first-child){margin-top:10px}main{margin-top:85px;padding:20px}h1,h2,h3,h4{margin:0 0 .5em}h1{font-size:48px}h2{font-size:40px}h3{font-size:32px}h4{font-size:24px}p{margin:0;line-height:2}p:not(:first-of-type){margin-top:1em}svg{fill:white}.text-hover{display:inline-block}.handwritten{font-family:Handwriting,sans-serif}#menu-toggle,.header-nav{display:none}.header-nav+label{padding:5px 0;cursor:pointer}.header-nav:checked+label::after{width:75%}.menu-icon{width:18px;height:18px;cursor:pointer}.menu-icon::after,.menu-icon::before{content:"";position:absolute;padding:1px 0;width:100%;border-radius:2px;background-color:#fff;transition:transform .3s}.menu-icon::after{bottom:0}#menu-toggle:checked+.menu-icon::before{transform:translateY(8px) rotate(135deg)}#menu-toggle:checked+.menu-icon::after{transform:translateY(-8px) rotate(45deg)}.inactive{display:none!important}.fadeout{animation:1s fadeout}@keyframes fadeout{100%{opacity:0;transform:translateY(-50px)}}.active{animation:1s fadein}@keyframes fadein{0%{opacity:0;transform:translateY(-50px)}100%{opacity:1}}.legacy-ul>li{display:flex;align-items:baseline}.overview{display:flex;align-items:center}.overview>div{flex:1}.social-ul{display:flex;flex-wrap:wrap}.social-ul>li{margin:10px 20px}.social-ul a{display:block;padding:5px}.social-ul svg{height:32px;transition:.2s}.profile-image{display:block;margin:auto;width:100%;z-index:-2;animation:2s infinite alternate glow}@keyframes glow{0%{filter:drop-shadow(0px 25px 50px #6200EA)}100%{transform:translateY(20px);filter:drop-shadow(0px 15px 30px #304FFE)}}.project-nav{border-bottom:2px dotted #fff}.experiences-ul>li>h4{flex-shrink:0}@media only screen and (min-width:1025px){article{padding:20px}.text-hover::after{content:"";display:block;position:absolute;left:50%;transform:translateX(-50%);padding:.6px 0;width:0;background-color:#fff;transition:.2s ease-out}.text-hover:hover::after{width:50%}.header-ul{display:flex}.header-ul>li:not(:last-child){margin-right:20px}.menu-icon{display:none}.profile-image{max-width:400px}}@media only screen and (max-width:1024px){.header-ul{position:absolute;left:0;top:0;z-index:-1;width:100vw;height:0;overflow-y:hidden;backdrop-filter:blur(20px);transition:height .6s ease-out}.header-ul>li:first-child{margin-top:87px}.header-nav+label{display:block;padding:10px 20px}#menu-toggle:checked~.header-ul{height:100vh}.profile-image{max-width:300px}}@media only screen and (min-width:769px){article{padding:10px}.legacy-ul>li>div{flex-grow:1}.overview-text{margin-right:25px}.social-ul svg:hover{transform:translateY(-8px)}.academics-ul>li>h4:nth-of-type(2n-1){width:20%;flex-shrink:0}.academics-ul>li>div{margin:0 50px}.legacy-ul>li>h4{margin-bottom:0}.experiences-ul>li>h4{margin-left:25px}}@media only screen and (max-width:768px){.overview{flex-direction:column-reverse}.legacy-ul>li{flex-direction:column}.legacy-ul>li>h4:last-of-type{margin-top:10px;margin-bottom:0}.experiences-ul>li{flex-direction:column-reverse!important}}
+        .social-ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+        }
+        .social-ul>li{
+            padding: 3px;
+        }
+        .social-ul>li:not(:first-child)::before{
+            content: "| ";
+            margin-left: 8px;
+        }
     </style>
 </head>
-<body style="margin: 0; background: url(background.webp) center/cover no-repeat fixed">
-    <header style="display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; padding: 20px; width: 100%; transition: top 0.5s;">
-        <h3 class="handwritten" style="font-weight: normal; margin-bottom: 0">Aryayan</h3>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon"></label>
-        <ul class="header-ul">
-            <li><input type="radio" id="overview" name="section" class="header-nav" value="0" checked><label for="overview" class="text-hover">Overview</label></li>
-            <li><input type="radio" id="academics" name="section" class="header-nav" value="1"><label for="academics" class="text-hover">Academics</label></li>
-            <li><input type="radio" id="projects" name="section" class="header-nav" value="2"><label for="projects" class="text-hover">Projects</label></li>
-            <li><input type="radio" id="skills" name="section" class="header-nav" value="3"><label for="skills" class="text-hover">Skills</label></li>
-            <li><input type="radio" id="experiences" name="section" class="header-nav" value="4"><label for="experiences" class="text-hover">Experiences</label></li>
+<body>
+    <input type="checkbox" id="aside-toggle">
+    <aside>
+        <label for="aside-toggle" class="aside-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/></svg></label>
+        <img src="profile_image.webp" alt="Profile Image" class="profile-image" draggable="false">
+        <h5 class="profile-title">Aryayan Roy</h5>
+        <ul class="aside-ul">
+            <li><a href="index.html" class="active">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="skills.html">Skills/Interests</a></li>
+            <li><a href="projects.html">Projects/Research</a></li>
         </ul>
-    </header>
+    </aside>
     <main>
+        <header>
+            <label for="aside-toggle" class="aside-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg></label>
+            <h1>About Me</h1>
+        </header>
         <article>
-            <section class="overview active" data-target="0">
-                <div class="overview-text">
-                    <h1 class="heading">Hi,<br>I'm Aryayan Roy</h1>
-                    <p style="margin-bottom: 30px;">I am passionate about staying up-to-date with the latest industry trends and technologies, and I am always looking for new and exciting ways to improve my skills and expand my knowledge.</p>
-                    <ul class="social-ul">
-                        <li><a href="https://www.facebook.com/aryayanroy/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></a></li>
-                        <li><a href="https://www.instagram.com/aryayanroy" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a></li>
-                        <li><a href="https://twitter.com/aryayanroy" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a></li>
-                        <li><a href="https://www.linkedin.com/in/aryayanroy/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg></a></li>
-                        <li><a href="https://github.com/aryayanroy" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a></li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="profile_image.webp" alt="Profile Image" class="profile-image">
-                </div>
+            <section>
+                <h3>Overview</h3>
+                <p>Pursuing B.Tech from Birla Institute of Technology, Mesra.</p>
+                <p>I am passionate about staying up-to-date with the latest industry trends and technologies, and I am always looking for new and exciting ways to improve my skills and expand my knowledge.</p>
             </section>
-            <section class="inactive" data-target="1">
-                <h1 class="heading">Academics</h1>
-                <ul class="legacy-ul academics-ul">
-                    <li>
-                        <h4>2022 - Present</h4>
-                        <div>
-                            <h3>Birla Institute of Technology - Mesra</h3>
-                            <h4>Ranchi, Jharkhand</h4>
-                            <span>Bachelor of Technology in Mechanical Engineering</span>
-                        </div>
-                        <h4>-</h4>
-                    </li>
-                    <li>
-                        <h4>2021 - 22 (Partial Drop)</h4>
-                        <div>
-                            <h3>RCC Institute of Information Technology</h3>
-                            <h4>Beleghata, Kolkata</h4>
-                            <ul>
-                                <li>Bachelor of Technology in Computer Science and Engineering</li>
-                                <li>Partial Drop in III Sem</li>
-                            </ul>
-                        </div>
-                        <h4>9.1</h4>
-                    </li>
-                    <li>
-                        <h4>2020 - 21</h4>
-                        <div>
-                            <h3>Central Board of Secondary Education</h3>
-                            <h4>Sain't Joseph's School, NTPC Kahalgaon</h4>
-                            <ul>
-                                <li>HSC - XII</li>
-                                <li>Physics, Chemistry & Mathematics + Computer Science</li>
-                            </ul>
-                        </div>
-                        <h4>84%</h4>
-                    </li>
-                    <li>
-                        <h4>2018 - 19</h4>
-                        <div>
-                            <h3>Central Board of Secondary Education</h3>
-                            <h4>Sain't Joseph's School, NTPC Kahalgaon</h4>
-                            <span>SSC - X</span>
-                        </div>
-                        <h4>88.5%</h4>
-                    </li>
-                </ul>
-            </section>
-            <section class="inactive" data-target="2">
-                <h1 class="heading">Projects</h1>
-                <ul class="projects-ul">
-                    <li>
-                        <h3>Library Management System</h3>
-                        <p>The Library Management System is a comprehensive software solution designed to streamline and automate various library operations. It provides an efficient platform for managing books, members, borrowings, and returns in a library setting. With this system, librarians can easily track and organize books, handle member registrations, facilitate book borrowing and returning processes, and generate reports.</p>
-                        <p><b>Skills:</b> PHP, MySQL, JavaScript, jQuery, AJAX, HTML5, Bootstrap, CSS3</p>
-                        <p><a href="https://github.com/aryayanroy/library_management-php_mysql_json" class="project-nav" target="_blank">View on GitHub</a></p>
-                    </li>
-                    <li>
-                        <h3>Team Srijan Website</h3>
-                        <p>The official Formula Student Club website of BIT Mesra. The site provides a dynamic platform for administrators to seamlessly manage and showcase updates, legacy information, and other essential details. Key features include:</p>
-                        <ol>
-                            <li><b>Dynamic Data Fetching:</b> Utilizes AJAX API to fetch data dynamically, ensuring real-time updates.</li>
-                            <li><b>Pagination:</b> Enables easy navigation and organization of content through a paginated interface.</li>
-                            <li><b>Mobile Responsiveness:</b> Ensures optimal viewing experience across a variety of devices for on-the-go access.</li>
-                            <li><b>Admin Privileges:</b> Administrators have the capability to appoint and remove other admins, maintaining control over site management.</li>
-                        </ol>
-                        <p><b>Skills:</b> PHP, MySQL, JavaScript, jQuery, AJAX, HTML5, Bootstrap, CSS3</p>
-                        <p><a href="https://github.com/aryayanroy/team_srijan-portfolio-ajax_php_mysql" class="project-nav" target="_blank">View on GitHub</a></p>
-                    </li>
-                    <li>
-                        <h3>Small Business Support Platform</h3>
-                        <p>Efficiently matches volunteers to small businesses based on specific needs and facilitates communication and feedback sharing.</p>
-                        <p><b>Skills:</b> PHP, MySQL, HTML5, Bootstrap, CSS3</p>
-                        <p><a href="https://github.com/aryayanroy/vyapar_guru-volunteer_app-php_mysql" class="project-nav" target="_blank">View on GitHub</a></p>
-                    </li>
-                </ul>
-            </section>
-            <section class="inactive" data-target="3">
-                <h1 class="heading">Skills</h1>
-                <ul>
-                    <li>
-                        <h3>Technical Skills</h3>
-                        <ul>
-                            <li><b>Programming:</b> PHP, Python, C</li>
-                            <li><b>Front-End:</b> HTML5, CSS3 (Responsive), Bootstrap, Tailwind CSS, SASS, JavaScript, jQuery, AJAX</li>
-                            <li><b>Database:</b> MySQL</li>
-                            <li><b>Version Control:</b> Git/GitHub</li>
-                            <li><b>Design Tool:</b> Adobe Photoshop, Illustrator, Figma</li>
-                            <li><b>3D/CAD:</b> SolidWorks, Ansys, Blender, Unity, NI Multisim</li>
-                            <li><b>Could & Analytics:</b>  Google Analytics, Google Cloud Platform (GCP), AutoML, Dataflow, cPanel</li>
-                            <li><b>Productivity:</b> Microsoft Office, Google Workspace</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Soft Skills</h3>
-                        <p>Team Player, Communication, Time Management, Critical Thinking, Adaptability, Work Ethics</p>
-                    </li>
-                </ul>
-            </section>
-            <section class="inactive" data-target="4">
-                <h1 class="heading">Experiences</h1>
-                <ul class="legacy-ul experiences-ul">
-                    <li>
-                        <div>
-                            <h3>Team Srijan Club - BIT Mesra, Ranchi</h3>
-                            <h4>Technical Team Member - Drive/Power Train Engineer</h4>
-                            <ul>
-                                <li>Involved in designing and manufacturing the powertrain of an EV Formula Student Car.</li>
-                                <li>Studying various technical components of a Formula Car, including Aerodynamics, Chassis, Vehicle Dynamics, Cooling, Power Train and Suspensions.</li>
-                                <li>Examining the rulebook of Formula Bharat and generating comprehensive reports.</li>
-                                <li>Secured BMS Sponsorship from Tesla and Texas Instruments.</li>
-                            </ul>
-                        </div>
-                        <h4>Feb 23 - Present</h4>
-                    </li>
-                    <li>
-                        <div>
-                            <h3>Mood Indigo - IIT Bombay</h3>
-                            <h4>Indigo Squad Member (Intern)</h4>
-                            <ul>
-                                <li>Digital Marketing for College Connect Program.</li>
-                            </ul>
-                        </div>
-                        <h4>Jul - Dec 22</h4>
-                    </li>
+            <section>
+                <h3>Social Links</h3>
+                <ul class="social-ul">
+                    <li><a href="https://www.linkedin.com/in/aryayanroy/">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/aryayanroy/">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/aryayanroy/">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/aryayanroy/">Twitter</a></li>
+                    <li><a href="https://github.com/aryayanroy">GitHub</a></li>
                 </ul>
             </section>
         </article>
     </main>
 </body>
-<script>
-function section_active(e){var t=document.querySelector("section[data-target='"+e+"']");t&&(t.classList.add("active"),t.classList.remove("inactive"))}function section_target(e){var t=document.querySelectorAll(".active");document.getElementById("menu-toggle").checked=!1,0==t.length?section_active(e):t.forEach(t=>{t.classList.remove("active"),t.classList.add("fadeout"),t.addEventListener("animationend",function(){t.removeEventListener("animationend",arguments.callee),t.classList.remove("fadeout"),t.classList.add("inactive"),section_active(e)})})}const sections=document.getElementsByName("section");for(var i=0;i<sections.length;i++)sections[i].addEventListener("change",function(e){section_target(e.target.value)});let header=document.getElementsByTagName("header")[0];window.onscroll=function(e){this.oldScroll>this.scrollY?header.style.top="0":header.style.top="-86px",this.oldScroll=this.scrollY};
-</script>
 </html>
