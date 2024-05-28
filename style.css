@@ -49,6 +49,9 @@ header{
     padding: 18px 6px 0 16px;
     border-bottom: 1px solid black;
 }
+article{
+    padding: 12px;
+}
 section:not(:first-of-type){
     margin-top: 24px;
 }
@@ -92,9 +95,6 @@ section:not(:first-of-type){
     main{
         flex-grow: 1;
     }
-    article{
-        padding: 12px;
-    }
     a:hover{
         border-bottom: 2px dotted #311B92;
     }
@@ -106,6 +106,8 @@ section:not(:first-of-type){
         text-align: right;
     }
 }
+
+
 @media only screen and (max-width: 767.98px){ 
     aside{
         position: fixed;
@@ -121,9 +123,6 @@ section:not(:first-of-type){
     header>h1{
         margin-bottom: 0;
     }
-    article{
-        padding: 6px;
-    }
 
 
     #aside-toggle:checked+aside{
@@ -134,8 +133,8 @@ section:not(:first-of-type){
     }
     aside>.aside-toggle{
         position: absolute;
-        right: 6px;
-        top: 6px;
+        right: 8px;
+        top: 8px;
     }
     .aside-ul>li{
         text-align: center;
