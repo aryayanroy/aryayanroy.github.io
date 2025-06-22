@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Research | Aryayan Roy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="md:flex">
+    <input type="checkbox" id="aside-toggler" class="hidden">
+    <aside class="shrink-0 fixed md:sticky z-1 top-0 right-full w-screen md:w-xs h-screen border-r border-slate-200 bg-white overflow-x-hidden transition-[right] duration-600">
+        <div class="flex flex-col max-h-full">
+            <div class="p-2 md:mt-4 mb-6">
+                <div class="md:hidden mb-3"><label for="aside-toggler" class="p-2 inline-block"><span class="material-symbols-outlined">close</span></label></div>
+                <a href="#" class="block mx-auto w-36 border-4 border-slate-200 rounded-full overflow-hidden"><img src="/photo.jpg" alt="Aryayan Roy" class="aspect-1/1 object-cover"></a>
+                <h1 class="mt-2 text-center"><a href="#" class="text-xl">Aryayan Roy</a></h1>
+            </div>
+            <ul class="grow p-2 overflow-auto">
+                <li><a href="/" class="p-4 block text-slate-600 hover:text-blue-500 md:hover:bg-blue-50"><span class="material-symbols-outlined mr-2">account_circle</span><span>About Me</span></a></li>
+                <li><a href="/academics.html" class="p-4 block text-slate-600 hover:text-blue-500 md:hover:bg-blue-50"><span class="material-symbols-outlined mr-2">school</span><span>Academic Qualifications</span></a></li>
+                <li><a href="/experiences.html" class="p-4 block text-slate-600 hover:text-blue-500 md:hover:bg-blue-50"><span class="material-symbols-outlined mr-2">work</span><span>Experiences</span></a></li>
+                <li><a href="/interests.html" class="p-4 block text-slate-600 hover:text-blue-500 md:hover:bg-blue-50"><span class="material-symbols-outlined mr-2">interests</span><span>Skills & Interests</span></a></li>
+                <li><a href="/projects.html" class="p-4 block text-blue-500 bg-blue-50 md:border-r-3 border-blue-500"><span class="material-symbols-outlined mr-2">lab_research</span><span>Projects & Research</span></a></li>
+            </ul>
+        </div>
+    </aside>
+    <main class="grow flex flex-col min-h-screen">
+        <header class="flex md:block items-center sticky top-0 p-4 border-b border-slate-200 bg-white">
+            <label for="aside-toggler" class="md:hidden mr-4"><span class="material-symbols-outlined">menu</span></label>
+            <h1 class="grow text-2xl">Projects & Research</h1>
+        </header>
+        <article class="grow p-2">
+            <ul>
+                <li></li>
+            </ul>
+        </article>
+        <footer class="sticky bottom-0 p-2 border-t border-slate-200 bg-white">
+            <ul class="flex flex-wrap">
+                <li class="m-1">Connect</li>
+                <li class="m-1"><a href="https://www.linkedin.com/in/aryayanroy" class="text-blue-500" target="_blank">LinkedIn</a></li>
+                <li class="m-1"><a href="mailto:btech10504.22@bitmesra.ac.in" class="text-blue-500" target="_blank">Email</a></li>
+                <li class="m-1"><a href="http://instagram.com/aryayanroy" class="text-blue-500" target="_blank">Instagram</a></li>
+                <li class="m-1"><a href="https://www.facebook.com/aryayanroy" class="text-blue-500" target="_blank">Facebook</a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+</html>
