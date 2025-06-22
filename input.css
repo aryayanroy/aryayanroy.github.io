@@ -1,12 +1,13 @@
 /*npx @tailwindcss/cli -i input.css -o style.css --watch*/
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
 @theme{
-    --font-sans: Ubuntu, sans-serif; 
+    --font-sans: Inter, sans-serif; 
 }
 .material-symbols-outlined{
     font-size: 1em;
     transform: scale(1.4);
+}
+#aside-toggler:checked+aside{
+    right: 0;
 }
